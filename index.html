@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人人做：一台浏览器管住全部生成任务，跑批建站不用盯梢</title>
+<meta name="keywords" content="人人做,批量建站,AI任务队列,自动生成,任务管理,静态站点">
+<meta name="description" content="人人做是一个面向个人站长与内容团队的批量生产工作台：把网站、文章、关键词排队下发，模型自动生成、自动部署、自动记录耗时与状态。任务开始与结束时间、生成字数、使用账号、模型版本一目了然，失败任务一键重试或换模型再跑。内置任务看板、耗时统计、账号池与多站点管理，配合 Pages 静态托管实现从关键词到可访问站点的全自动流水线。">
+<link rel="canonical" href="https://rrz.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="人人做">
+<meta property="og:title" content="人人做：一台浏览器管住全部生成任务，跑批建站不用盯梢">
+<meta property="og:description" content="人人做是一个面向个人站长与内容团队的批量生产工作台：把网站、文章、关键词排队下发，模型自动生成、自动部署、自动记录耗时与状态。任务开始与结束时间、生成字数、使用账号、模型版本一目了然，失败任务一键重试或换模型再跑。内置任务看板、耗时统计、账号池与多站点管理，配合 Pages 静态托管实现从关键词到可访问站点的全自动流水线。人人做，让人人都能按批生产、按量交付。">
+<meta property="og:url" content="https://rrz.pages.dev/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="人人做：一台浏览器管住全部生成任务，跑批建站不用盯梢">
+<meta name="twitter:description" content="人人做是一个面向个人站长与内容团队的批量生产工作台：把网站、文章、关键词排队下发，模型自动生成、自动部署、自动记录耗时与状态。失败任务一键重试或换模型再跑，从关键词到可访问站点全程自动。">
+<link rel="stylesheet" href="assets/vendor/uikit/css/uikit.min.css">
+<script src="assets/vendor/uikit/js/uikit.min.js"></script>
+<script src="assets/vendor/uikit/js/uikit-icons.min.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"人人做",
+  "url":"https://rrz.pages.dev/",
+  "description":"人人做是面向个人站长与内容团队的批量生产工作台，支持任务排队、模型自动生成、自动部署与耗时统计，失败任务可一键重试或换模型再跑。",
+  "inLanguage":"zh-CN",
+  "potentialAction":{"@type":"SearchAction","target":"https://rrz.pages.dev/?q={search_term_string}","query-input":"required name=search_term_string"}
+}
+</script>
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<script type="application/ld+json">{"@context":"https://ziyuan.baidu.com/contexts/cambrian.jsonld","@id":"https://rrz.pages.dev/","title":"人人做：一台浏览器管住全部生成任务，跑批建站不用盯梢","pubDate":"2026-10-25T13:54:14","upDate":"2026-10-25T13:54:14"}</script>
+<link rel="stylesheet" href="assets/mdf6wc.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="nav-inner">
+      <nav class="nav-side" aria-label="左侧导航">
+        <a class="nav-link active" href="#top">首页</a>
+        <a class="nav-link" href="#channel-batch">批量跑站</a>
+        <a class="nav-link" href="#channel-model">模型调度</a>
+      </nav>
+      <a class="logo" href="#top"><span class="dot"></span>人人做</a>
+      <nav class="nav-side right" aria-label="右侧导航">
+        <a class="nav-link" href="#channel-account">账号与上传</a>
+        <a class="nav-link" href="#channel-log">任务日志</a>
+        <a class="btn btn-primary btn-sm" href="#cta">开始排队</a>
+      </nav>
+      <button class="nav-burger" id="burger" aria-label="打开菜单">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#top">首页</a>
+    <a href="#channel-batch">批量跑站</a>
+    <a href="#channel-model">模型调度</a>
+    <a href="#channel-account">账号与上传</a>
+    <a href="#channel-log">任务日志</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="pill">任务队列 · 自动生成 · 一键部署</span>
+    <h1>人人做：一台浏览器管住全部生成任务，<em>跑批建站不用盯梢</em></h1>
+    <p class="sub">把关键词、模型、账号一起排进队列，剩下的交给流水线。开始与结束时间、生成字数、耗时、状态全部自动落账，失败的任务点一下重试，或者换个模型接着跑——从关键词到可访问的站点，人人做帮你按批交付。</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg" href="#cta">领取工作台</a>
+      <a class="btn btn-lg" href="#live">看看真实任务长什么样</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><b>2,847</b><span>近 30 天完成任务数</span></div>
+      <div class="hero-stat"><b>12.6<small style="font-size:14px">万</small></b><span>累计生成内容字数</span></div>
+      <div class="hero-stat"><b>98.2%</b><span>批次部署成功率</span></div>
+      <div class="hero-stat"><b>16min</b><span>单站点平均生成耗时</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 核心卖点 -->
+<section class="block">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">为什么用</div>
+      <h2>不是又一个写作工具，是一条完整的跑批流水线</h2>
+      <p>排队、生成、部署、记账，四件事在一个页面里闭环，不用在多个工具之间来回搬运文件。</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="icon">⧉</div>
+        <h3>队列式批量下发</h3>
+        <p>一次贴入几十个关键词，按站点分组排队。谁先跑、谁重跑、谁换模型，全部在队列里调整，跑完一批再来一批。</p>
+        <div class="meta">适合：多站点矩阵 · 选题排期</div>
+      </div>
+      <div class="card">
+        <div class="icon">◈</div>
+        <h3>多模型自由切换</h3>
+        <p>deepseek-flash、长文模型、结构化模型随时换。失败任务点「换模型」直接重跑，不用重建任务，上下文原样保留。</p>
+        <div class="meta">适合：成本控制 · 效果对比</div>
+      </div>
+      <div class="card">
+        <div class="icon">▣</div>
+        <h3>生成即部署</h3>
+        <p>任务跑完自动打包成静态页面，直连 Pages 托管上线。生成 15 分钟，访问 15 秒，域名绑定一步到位。</p>
+        <div class="meta">适合：静态站 · 纯 HTML 交付</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 实时任务看板 -->
+<section class="block mint" id="live">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">实时看板</div>
+      <h2>每一个任务，都有清清楚楚的账</h2>
+      <p>开始时间、结束时间、耗时、字数、使用账号、上传状态，一行看完；失败的行一眼跳出来。</p>
+    </div>
+    <div class="taskbar">
+      <div class="taskbar-top">
+        <span class="t">今日任务</span>
+        <span class="n">共 5 条 · 失败 1 · 进行中 1 · 已完成 3</span>
+      </div>
+      <div style="overflow-x:auto">
+      <table class="tasks">
+        <thead>
+          <tr><th></th><th>网站</th><th>时间</th><th>模型</th><th>账号</th><th>耗时</th><th>状态</th><th>上传</th><th>操作</th></tr>
+        </thead>
+        <tbody>
+          <tr class="row">
+            <td data-th="选择"><input type="checkbox" class="chk" aria-label="选择任务"></td>
+            <td><div class="site-name">木头泛目录程序</div><div class="site-url mono">mtfmlc.pages.dev</div></td>
+            <td><div class="tline"><b>开始</b>10-17 21:36</div><div class="tline"><b>结束</b>10-17 21:51</div><div class="tline"><b>用时</b>生成 15m28s</div></td>
+            <td><span class="model">deepseek-flash</span></td>
+            <td><span class="badge">GH</span><div class="acct mono">sampsonallison9711</div></td>
+            <td class="cost"><b>生成 15m28s · 3746 字</b></td>
+            <td><span class="status-fail">生成失败</span></td>
+            <td><span class="upload-no">未上传</span></td>
+            <td><div class="ops"><button class="btn btn-sm">重试</button><button class="btn btn-sm">换模型</button><button class="btn btn-sm btn-danger">删除</button></div></td>
+          </tr>
+          <tr class="row">
+            <td data-th="选择"><input type="checkbox" class="chk" aria-label="选择任务"></td>
+            <td><div class="site-name">青柠工具合集</div><div class="site-url mono">qntool.pages.dev</div></td>
+            <td><div class="tline"><b>开始</b>10-17 20:02</div><div class="tline"><b>结束</b>10-17 20:19</div><div class="tline"><b>用时</b>生成 17m03s</div></td>
+            <td><span class="model">longform-v3</span></td>
+            <td><span class="badge">GH</span><div class="acct mono">qingning_publisher</div></td>
+            <td class="cost"><b style="color:var(--ink)">生成 17m03s · 5122 字</b></td>
+            <td><span class="status-ok">已完成</span></td>
+            <td><span class="status-run">已上传</span></td>
+            <td><div class="ops"><button class="btn btn-sm">重试</button><button class="btn btn-sm">换模型</button><button class="btn btn-sm btn-danger">删除</button></div></td>
+          </tr>
+          <tr class="row">
+            <td data-th="选择"><input type="checkbox" class="chk" aria-label="选择任务"></td>
+            <td><div class="site-name">南巷生活手记</div><div class="site-url mono">nxlife.pages.dev</div></td>
+            <td><div class="tline"><b>开始</b>10-17 19:40</div><div class="tline"><b>结束</b>—</div><div class="tline"><b>用时</b>运行中 08m12s</div></td>
+            <td><span class="model">deepseek-flash</span></td>
+            <td><span class="badge">GH</span><div class="acct mono">nanxiang_w21</div></td>
+            <td class="cost"><b style="color:var(--ink)">已产出 2140 字</b></td>
+            <td><span class="status-run">进行中</span></td>
+            <td><span class="upload-no">—</span></td>
+            <td><div class="ops"><button class="btn btn-sm">重试</button><button class="btn btn-sm">换模型</button><button class="btn btn-sm btn-danger">删除</button></div></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <p style="margin-top:14px;font-size:13px;color:var(--ink3)">失败原因、模型响应与账号额度同样记录在任务详情里，点行即展开。</p>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="block" id="channels">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">频道矩阵</div>
+      <h2>四个频道，覆盖从建站到交付的每一段</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card" id="channel-batch">
+        <div class="icon">⇉</div>
+        <h3>批量跑站</h3>
+        <p>多站点矩阵排队、关键词分批下发、整批打包部署，矩阵站长的主战场。</p>
+      </div>
+      <div class="card" id="channel-model">
+        <div class="icon">◈</div>
+        <h3>模型调度</h3>
+        <p>模型选型、成本对比、失败换跑策略，让每一分 token 花在刀刃上。</p>
+      </div>
+      <div class="card" id="channel-account">
+        <div class="icon">◉</div>
+        <h3>账号与上传</h3>
+        <p>账号池管理、发布账号轮换、Pages 上传与绑定域名的完整链路。</p>
+      </div>
+      <div class="card" id="channel-log">
+        <div class="icon">≡</div>
+        <h3>任务日志</h3>
+        <p>耗时统计、字数账本、失败归因，跑了多少、跑得怎么样，全有据可查。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 使用步骤 -->
+<section class="block mint">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">工作方式</div>
+      <h2>人人做三步下发，剩下的交给队列</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="step"><span class="num">1</span><div><h3>建站点、贴关键词</h3><p>新建站点，填好域名与栏目，把关键词清单整批贴进任务栏，支持一次上百条。</p></div></div>
+      </div>
+      <div class="card">
+        <div class="step"><span class="num">2</span><div><h3>选模型、配账号</h3><p>按预算和内容类型挑模型，从账号池里指定发布账号，也可以让系统自动轮换。</p></div></div>
+      </div>
+      <div class="card">
+        <div class="step"><span class="num">3</span><div><h3>排队跑，坐等上线</h3><p>队列自动逐条执行，完成后直接部署到 Pages。失败的任务在列表里一键重试。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 数据条 -->
+<section class="block">
+  <div class="container">
+    <div class="datagrid">
+      <div class="databox"><b>3.2<i>万</i></b><span>累计完成任务条目</span></div>
+      <div class="databox"><b>417<i>个</i></b><span>已上线静态站点</span></div>
+      <div class="databox"><b>15m<i>上下</i></b><span>单站平均生成时长</span></div>
+      <div class="databox"><b>24<i>小时</i></b><span>队列无人值守运行</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 场景板块 -->
+<section class="block mint">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">谁在用</div>
+      <h2>这些活儿，交给队列最省心</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>矩阵站长的日常跑批</h3>
+        <p>十几个站点轮流排产，每站每天固定产出若干篇，账号轮换、模型混跑，夜里挂机跑，早上验收。</p>
+        <div class="meta">典型节奏：每晚 3~5 个站点批次</div>
+      </div>
+      <div class="card">
+        <h3>内容工作室的交付流水线</h3>
+        <p>客户选题进队列，成稿自动生成 HTML 直接交付，耗时与字数自动出账单，报价有依据。</p>
+        <div class="meta">典型节奏：按单建批、按批结算</div>
+      </div>
+      <div class="card">
+        <h3>个人站长的关键词试验田</h3>
+        <p>想到一个选题方向，几十个长尾词排进去试水，跑完看收录与流量，跑得动的方向再加批。</p>
+        <div class="meta">典型节奏：小批量 · 快迭代</div>
+      </div>
+      <div class="card">
+        <h3>工具与资源站的批量填充</h3>
+        <p>目录型、合集型站点需要大量结构化页面，队列按模板生成并自动部署，页面数以百计也能几天铺完。</p>
+        <div class="meta">典型节奏：模板驱动 · 整站铺量</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 任务日志/资讯 feed -->
+<section class="block">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">任务日志</div>
+      <h2>人人做最近的跑批动态</h2>
+    </div>
+    <div class="feed">
+      <div class="feed-item">
+        <span class="badge tag">完成</span>
+        <div><h4><a href="#live">「青柠工具合集」整站 32 页生成完毕并已上传</a></h4><p>longform-v3 模型 · 17m03s · 5122 字 · 账号 qingning_publisher</p></div>
+        <span class="time">10-17 20:19</span>
+      </div>
+      <div class="feed-item">
+        <span class="badge tag">完成</span>
+        <div><h4><a href="#live">「南巷生活手记」本周第二批 18 篇文章队列清空</a></h4><p>deepseek-flash · 12m47s · 3980 字 · 已自动部署</p></div>
+        <span class="time">10-17 18:22</span>
+      </div>
+      <div class="feed-item">
+        <span class="badge tag">失败</span>
+        <div><h4><a href="#live">「木头泛目录程序」生成中断：模型响应超时</a></h4><p>建议换 longform-v3 重跑，上下文已保留，无需重建任务</p></div>
+        <span class="time">10-17 21:51</span>
+      </div>
+      <div class="feed-item">
+        <span class="badge tag">完成</span>
+        <div><h4><a href="#live">「云杉资源导航」新域名绑定完成，整站访问正常</a></h4><p> Yunshan.pages.dev · 96 页 · 累计耗时 2 小时 41 分</p></div>
+        <span class="time">10-16 23:05</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 成本/模型对比 -->
+<section class="block mint">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">模型账本</div>
+      <h2>换模型重跑，成本一目了然</h2>
+      <p>同一批关键词在不同模型下的耗时与字数记录，选型不再靠猜。</p>
+    </div>
+    <div class="taskbar">
+      <div style="overflow-x:auto">
+      <table class="tasks">
+        <thead><tr><th>模型</th><th>本均耗时 / 站</th><th>平均字数 / 篇</th><th>本月成功率</th><th>适用场景</th></tr></thead>
+        <tbody>
+          <tr class="row"><td><span class="model">deepseek-flash</span></td><td><span class="tline"><b>用时</b>约 15m</span></td><td>3800 字上下</td><td><span class="status-ok">96.4%</span></td><td>常规长文 · 性价比优先</td></tr>
+          <tr class="row"><td><span class="model">longform-v3</span></td><td><span class="tline"><b>用时</b>约 19m</span></td><td>5200 字上下</td><td><span class="status-ok">97.8%</span></td><td>深度长文 · 结构复杂站点</td></tr>
+          <tr class="row"><td><span class="model">struct-lite</span></td><td><span class="tline"><b>用时</b>约 9m</span></td><td>2100 字上下</td><td><span class="status-run">94.1%</span></td><td>目录页 · 工具与合集页</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 可信度/评价 -->
+<section class="block">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">跑批的人怎么说</div>
+      <h2>人人做从手动搬运到挂机交付</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <p>"以前一个晚上守着三个站搬文件，现在睡前把队列排满，早上起来看状态列就够了。失败的就点重试，两分钟的事。"</p>
+        <div class="meta">矩阵站长 · 同时运营 14 个站点</div>
+      </div>
+      <div class="card">
+        <p>"耗时和字数自动记账，给客户报工期再也不用拍脑袋。上个月交付的 6 个单子，全部按队列时间准时上线。"</p>
+        <div class="meta">内容工作室主理人</div>
+      </div>
+      <div class="card">
+        <p>"换模型重跑这个功能救了我好几次。flash 跑挂的长文任务，切到 longform 一遍就过，任务不用重建。"</p>
+        <div class="meta">个人站长 · 日均跑批 20 条</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="block mint">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">常见问题</div>
+      <h2>跑批之前，先弄清这几件事</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>一个批次最多能排多少任务？</summary>
+        <div class="ans">单批次支持最多 200 条任务排队。队列按顺序逐条执行，也可以设置并发数同时跑多个站点，跑完自动进入下一批。</div>
+      </details>
+      <details>
+        <summary>任务失败了怎么办？</summary>
+        <div class="ans">失败任务会在看板中标红，并记录失败原因（超时、额度不足、内容校验未通过等）。点「重试」用原模型再跑，点「换模型」切换后保留上下文重跑，两个操作都不需要重建任务。</div>
+      </details>
+      <details>
+        <summary>生成的站点部署到哪里？</summary>
+        <div class="ans">默认部署到 Pages 静态托管，生成完成后自动上传并给出访问地址，支持绑定自定义域名。整站为纯静态 HTML，迁移到任何主机都没有障碍。</div>
+      </details>
+      <details>
+        <summary>账号池是怎么工作的？</summary>
+        <div class="ans">把可用的发布账号加入账号池，任务下发时可以指定账号，也可以开启自动轮换，由系统在池内分配，降低单账号的高频发布压力。</div>
+      </details>
+      <details>
+        <summary>夜里挂机跑，第二天怎么验收？</summary>
+        <div class="ans">看板按状态、字数、耗时汇总当天批次，失败行置顶显示。任务日志保留每一次开始与结束时间，逐条可回溯。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="block" id="cta">
+  <div class="container">
+    <div class="cta">
+      <div>
+        <h2>今晚就把第一批关键词排进队列</h2>
+        <p>注册即送首批任务额度，从建站到部署的完整链路一次跑通。人人做，让按批生产、按量交付成为每个人的日常。</p>
+      </div>
+      <a class="btn btn-lg" href="#top">免费开通工作台</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top"><span class="dot"></span>人人做</a>
+        <p>人人做 · 批量生产工作台。队列式下发、多模型调度、自动部署与全程记账，让按批生产、按量交付成为每个人的日常。</p>
+      </div>
+      <div>
+        <h5>频道</h5>
+        <a href="#channel-batch">批量跑站</a>
+        <a href="#channel-model">模型调度</a>
+        <a href="#channel-account">账号与上传</a>
+        <a href="#channel-log">任务日志</a>
+      </div>
+      <div>
+        <h5>了解</h5>
+        <a href="#live">实时看板</a>
+        <a href="#cta">免费开通</a>
+        <a href="#top">返回首页</a>
+      </div>
+      <div>
+        <h5>支持</h5>
+        <a href="#cta">联系客服</a>
+        <a href="#cta">服务状态</a>
+        <a href="#cta">使用条款</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 人人做 · rrz.pages.dev</span>
+      <span>队列运行中 · 全站静态托管</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('mobileMenu');
+  b.addEventListener('click',function(){m.classList.toggle('open');});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open');});
+})();
+</script>
+</body>
+</html
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top"><span class="dot"></span>人人做</a>
+        <p>人人做 · 批量生产工作台。队列式下发、多模型调度、自动部署与全程记账，让按批生产、按量交付成为每个人的日常。</p>
+      </div>
+      <div>
+        <h5>频道</h5>
+        <a href="#channel-batch">批量跑站</a>
+        <a href="#channel-model">模型调度</a>
+        <a href="#channel-account">账号与上传</a>
+        <a href="#channel-log">任务日志</a>
+      </div>
+      <div>
+        <h5>了解</h5>
+        <a href="#live">实时看板</a>
+        <a href="#cta">免费开通</a>
+        <a href="#top">返回首页</a>
+      </div>
+      <div>
+        <h5>支持</h5>
+        <a href="#cta">联系客服</a>
+        <a href="#cta">服务状态</a>
+        <a href="#cta">使用条款</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 人人做 · rrz.pages.dev</span>
+      <span>队列运行中 · 全站静态托管</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('mobileMenu');
+  b.addEventListener('click',function(){m.classList.toggle('open');});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open');});
+})();
+</script>
+</body>
+</html>
